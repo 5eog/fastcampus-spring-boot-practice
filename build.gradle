@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.yunji'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '14'
+sourceCompatibility = '16'
 
 repositories {
     mavenCentral()
@@ -16,10 +16,17 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter'
     compileOnly 'org.projectlombok:lombok'
+    // Spring Configuration Processor
+    //application.properties, .yml 파일에 넣는 커스텀 설정의 자동완성, 도움말을 지원 한다.
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+compileJava{
+    inputs.files(processResources)
 }
