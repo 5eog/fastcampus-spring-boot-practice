@@ -15,6 +15,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     compileOnly 'org.projectlombok:lombok'
     // Spring Configuration Processor
     //application.properties, .yml 파일에 넣는 커스텀 설정의 자동완성, 도움말을 지원 한다.
