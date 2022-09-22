@@ -17,7 +17,7 @@ import java.time.Duration;
  * date           : 22. 9. 20.
  */
 
-@EnableCaching
+//@EnableCaching
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport {
 
